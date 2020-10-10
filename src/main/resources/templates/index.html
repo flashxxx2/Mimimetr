@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>MimiMetr</title>
+</head>
+<body>
+<h1 align="center" style="background-color:darkgreen"> МиМиМиМетр  </h1>
+
+<ul>
+    <li data-th-each="cat : ${cats}">
+        <a data-th-href="@{cat/{id}(id=${cat.id})}">
+            <img style="padding-left: 30px; padding-top: 26px;" data-th-src="@{images/{path}(path=${cat.path})}" class="card-img-top" alt="..." >>
+
+            <a data-th-href="@{cat/{id}(id=${cat.id})}" style="color: #ff3f2d">[[${cat.name}]]</a>
+        </a>
+
+    </li>
+</ul>
+
+
+</body>
+</html>
